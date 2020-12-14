@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">  <!--scrierea corecta UTF-8, scot virgula de la sfarsitului linier de cod-->
+        <title> Gasiti erorile in cod, corectati-le, vedeti daca codul poate fi imbunatatit. :)</title> <!--ridicat tagul title inainte de style, eliminat tagurile br-->
+        <!-- schimabt culorile un pic ca culorile setate initial imi traumatizau vederea :))) -->
+        
+     <style>
+       /* mutat h1 cu h2 */
+            h1 {
+                color:darkred;
+            }
+
+            h2 {
+                color: white;
+            }
+           
+            p {
+                color: darkblue;
+            }
+            img {
+                width: 200px;
+                
+            }
+            #images-ul {
+                background-color: black;
+            }
+            .menu {
+                background-color: green;
+            }
+        </style>
+        
+    </head>
+
+    <body style="background: rgb(110, 109, 109);">
+      
+        <!-- Sunt oare corect adaugate microformatele? Combinatia de atribute itemscope si itemtype este folosita corect. -->
+        
+        <header itemscope itemtype="http://schema.org/Article">
+           <h1 itemprop="name"> Verifica-ti cunostintele HTML si CSS.</h1> <!--h1 heading principal, schimabt cu locul intre h1 si h2 -->
+           <h2>Gasiti erorile in cod, corectati-le, vedeti daca codul poate fi imbunatatit. :) </h2> <!--scos tagurile br, nu au sens in textul dat -->
+        </header>
+
+        <!-- Alegeti elementul semantic potrivit pentru urmatoarea lista: Nav- considerand class="menu" atribuit lui ul, presupun ca acesta ar putea fi un meniu de navigare, l-am mutat mai sus in structura paginiii -->
+        <!-- Incercati sa aflati in ce culoare se va colora fundalul listei: Black, id-ul are specificity mai mare -->
+        
+        <nav>
+            <ul id="images-ul" class="menu">                                   <!--pus cratima in numele id-ului, practica recomandata-->
+                <li> <a href="/1"><img src="1.jpg" alt="Image 1">Link 1</a></li>
+                <li> <a href="/2"><img src="2.jpg" alt="Image 2">Link 2</a></li>
+                <li class="active"> <a href="/3"> <img src="3.jpg" alt="Image 3">Link 3</a></li>
+                <li> <a href="/4"><img src="4.jpg" alt="Image 4">Link 4</a></li>
+                <li> <a href="/5"><img src="5.jpg" alt="Image 5">Link 5</a></li>
+            </ul>
+      </nav>
+
+         <!-- Alegeti elementul semantic potrivit in care pot fi plasate paragrafele ce urmeaza: urmatoarele 2 paragrafe ar putea constitui o sectiune din pagina, focusandu-se pe teorie HTML. Putem presupune ca acesta pagina mai are o alta sectiune care se focuseaza pe teorie CSS-->
+         
+      <section>
+         <p>
+             Acesta este <strong>un text accentuat.</strong> <br>
+
+             <!-- Ce trebuie facut ptr ca forma tag-ului sa se afiseze corect? adaugam &lt; si &gt;-->
+
+             Tag-ul &lt;img src="URL"&gt; este folosit pentru adaugarea unei imagini. <br>
+             De exemplu:
+             <!-- In ce dimensiuni se va afisa imaginea - 200px specificat selectorul img in style -->
+             <img src="images/logo.jpg"  alt="logo">. <br> 
+
+     <!--nume imagine logo.jpg in loc de logo,jpg, adaugat un alt attribute, attribute align este obsolete in HTML, se recomanda de stilizat prim CSS
+     Eliminat itemprop="image", lipsesc itemscope & itemtype in acest element-->
+         </p>
+
+           <p>        <!--Eliminat itemprop="image", lipsesc itemscope & itemtype in acest element-->
+             <!-- Ce trebuie facut ptr ca forma tag-ului sa se afiseze corect? adaugam &lt; si &gt; -->
+             Tag-ul &lt;h1&gt; reprezinta un antet, ca si  &lt;h2&gt;,  &lt;h3&gt;,  &lt;h4&gt;,  &lt;h5&gt;,  &lt;h6&gt;.
+             <br>
+             Tag-ul &lt;b&gt; si &lt;strong&gt; sunt echivalente.
+             <!-- Desi browserul va stiliza atat tag-ul b cat si tagul strong la fel, tag-ul strong este folosit pentru elemente ce sunt mai importante din punc de vedere semantic -->
+         </p>
+        </section>
+
+         
+    </body>
+</html>
